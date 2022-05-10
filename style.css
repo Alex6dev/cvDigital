@@ -1,0 +1,481 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+h1 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(30px, 5vw, 100px);
+  margin: 0;
+  color: rgb(245, 222, 179);
+  text-shadow: 1px 1px 5px black;
+}
+
+h2 {
+  font-family: "Playfair Display", serif;
+  color: rgb(245, 222, 179);
+  text-shadow: 1px 1px 5px black;
+}
+
+h3 {
+  font-family: "Playfair Display", serif;
+  text-shadow: 1px 1px 4px rgb(250, 128, 114);
+  font-size: clamp(10px, 2vw, 25px);
+  position: relative;
+}
+h3::before {
+  content: "";
+  width: 100px;
+  height: 1px;
+  background-color: rgb(250, 128, 114);
+  position: absolute;
+  bottom: -10px;
+}
+h4 {
+  font-family: "Playfair Display", serif;
+  color: rgb(50, 82, 109);
+  font-size: clamp(10px, 2vw, 25px);
+  position: relative;
+}
+
+h5 {
+  font-family: "Playfair Display", serif;
+  font-size: clamp(10px, 2vw, 25px);
+}
+
+p {
+  font-family: "Source Sans Pro", sans-serif;
+  font-size: clamp(10px, 2vw, 20px);
+}
+
+h6 {
+  font-family: "Playfair Display", serif;
+  color: rgb(250, 128, 114);
+  font-size: clamp(10px, 2vw, 25px);
+  position: relative;
+}
+
+li {
+  list-style-type: none;
+  font-size: clamp(10px, 2vw, 20px);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(245, 222, 179);
+  font-size: clamp(15px, 2vw, 25px);
+}
+
+.svg-competence {
+  font-family: sans-serif;
+  height: 70px;
+  width: 70px;
+  margin-bottom: 1rem;
+}
+@media screen and (max-width: 599px) {
+  .svg-competence {
+    height: 50px;
+    width: 50px;
+    border-radius: 5px;
+  }
+}
+
+.svg-competenceProjet {
+  height: 50px;
+  width: 50px;
+  margin-bottom: 0;
+}
+@media screen and (max-width: 599px) {
+  .svg-competenceProjet {
+    height: 30px;
+    width: 30px;
+  }
+}
+
+.titre-competence {
+  fill: #ffffff;
+  font-weight: bold;
+  font-size: 15px;
+  text-shadow: 0 0 1px #000000;
+}
+
+.version-competence {
+  font-size: 65px;
+  opacity: 0.4;
+}
+@media screen and (max-width: 599px) {
+  .version-competence {
+    font-size: 40px;
+    border-radius: 0 2rem;
+  }
+}
+
+header {
+  position: relative;
+}
+
+header .containerHeader {
+  display: flex;
+  background-color: rgb(50, 82, 109);
+  width: 90%;
+  margin-left: 10%;
+}
+header .containerHeader div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 78%;
+  background-color: transparent;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  header .containerHeader {
+    width: calc(100% - 150px);
+    margin-left: 150px;
+  }
+}
+@media screen and (max-width: 599px) {
+  header .containerHeader {
+    width: 100%;
+    margin: 0;
+  }
+}
+
+.imgHeader {
+  margin: 2%;
+  object-fit: cover;
+  width: 10%;
+  min-width: 200px;
+  border-radius: 0 5rem;
+  box-shadow: 1px 1px 5px rgb(0, 0, 0), -1px -1px 5px rgb(0, 0, 0);
+}
+@media screen and (max-width: 599px) {
+  .imgHeader {
+    min-width: 100px;
+    border-radius: 0 2rem;
+  }
+}
+
+.containerNavVertical {
+  position: fixed;
+  background-color: rgb(50, 82, 109);
+  top: 0;
+  height: 100%;
+  width: 10%;
+  min-width: 150px;
+  display: flex;
+}
+.containerNavVertical ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+  padding: 0;
+}
+.containerNavVertical ul li {
+  font-size: 2rem;
+  padding: 0.5rem;
+  transform: rotateX(10deg) rotateY(-25deg);
+  box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.212);
+  text-align: center;
+  transition: 1s box-shadow;
+}
+.containerNavVertical ul li:hover {
+  box-shadow: 0px 0px 2px 3px black;
+}
+@media screen and (max-width: 599px) {
+  .containerNavVertical {
+    display: none;
+  }
+}
+
+article {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 90%;
+  margin-left: 10%;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  article {
+    width: calc(100% - 150px);
+    margin-left: 150px;
+  }
+}
+@media screen and (max-width: 599px) {
+  article {
+    width: 100%;
+    margin: 0;
+  }
+}
+article .containerContent {
+  max-width: 800px;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  article .containerContent {
+    width: 90%;
+    margin: 50px;
+  }
+}
+@media screen and (max-width: 599px) {
+  article .containerContent {
+    width: 100%;
+  }
+}
+article .containerContent .containerProfil {
+  margin: 7rem 0 7rem 0;
+}
+
+.post-it {
+  margin: 7rem 0 7rem 0;
+  padding: 2rem;
+  position: relative;
+  background-color: rgb(245, 222, 179);
+  border: solid 1px gray;
+  transform: translate(300px, 0);
+  opacity: 0;
+  box-shadow: 10px 10px 1px 1px rgb(50, 82, 109);
+}
+
+.logoHardSkills {
+  height: 70px;
+  width: 70px;
+  object-fit: cover;
+  border-radius: 1rem;
+}
+@media screen and (max-width: 599px) {
+  .logoHardSkills {
+    height: 50px;
+    width: 50px;
+    border-radius: 10px;
+  }
+}
+
+.listHardSkills {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+}
+.listHardSkills li {
+  width: 150px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+@media screen and (max-width: 599px) {
+  .listHardSkills li {
+    width: 60px;
+  }
+}
+.listHardSkills figure {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem 0 0 0;
+}
+
+.listExp {
+  padding-top: 3rem;
+}
+@media screen and (max-width: 599px) {
+  .listExp {
+    margin-left: 0;
+  }
+}
+
+.point {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border-radius: 5rem;
+  z-index: 1;
+}
+
+.pointNiv1 {
+  background-color: rgb(50, 82, 109);
+  top: 1rem;
+  left: -3rem;
+}
+
+.pointNiv2 {
+  background-color: rgb(250, 128, 114);
+  top: 0.5rem;
+  left: -5.5rem;
+}
+@media screen and (max-width: 599px) {
+  .pointNiv2 {
+    left: -3rem;
+  }
+}
+
+@media screen and (max-width: 599px) {
+  .listProjetOpenclassrooms {
+    padding: 0;
+  }
+}
+
+.projetOpenclass {
+  transform: translate(100px, 0);
+  opacity: 0;
+}
+
+.listInformationProjet li {
+  list-style-type: circle;
+}
+
+.headerPorjet {
+  display: flex;
+}
+.headerPorjet ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 0;
+}
+.headerPorjet li {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 1rem;
+}
+@media screen and (max-width: 599px) {
+  .headerPorjet li {
+    margin: 10px;
+  }
+}
+.headerPorjet figure {
+  margin: 0;
+}
+
+.logoSkillsProjet {
+  width: 50px;
+  height: 50px;
+  border-radius: 0.5rem;
+  object-fit: cover;
+}
+@media screen and (max-width: 599px) {
+  .logoSkillsProjet {
+    height: 25px;
+    width: 25px;
+  }
+}
+
+.experience {
+  opacity: 0;
+  transform: translate(100px, 0);
+}
+
+.barreHistorique {
+  width: 5px;
+  height: 280rem;
+  background-color: rgb(50, 82, 109);
+  position: absolute;
+  top: 10rem;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  .barreHistorique {
+    height: 205rem;
+  }
+}
+@media screen and (max-width: 599px) {
+  .barreHistorique {
+    height: 140rem;
+  }
+}
+
+.diplome {
+  position: relative;
+  margin: 2rem 0 0 0;
+}
+.diplome::after {
+  content: "";
+  background-color: rgb(250, 128, 114);
+  width: 70px;
+  height: 3px;
+  position: absolute;
+  bottom: -0.5rem;
+  left: 0;
+}
+.diplome::before {
+  content: "";
+  background-color: rgb(250, 128, 114);
+  width: 10px;
+  height: 10px;
+  border-radius: 2rem;
+  position: absolute;
+  left: -1rem;
+  top: 1rem;
+}
+
+.nameDiplome {
+  margin: 0.5rem 0 0 0;
+}
+
+.listFormation p {
+  margin: 0;
+}
+
+.listCircle li {
+  list-style-type: circle;
+}
+
+footer {
+  width: 90%;
+  height: 200px;
+  margin-left: 10%;
+  background-color: rgb(63, 63, 63);
+  color: rgb(245, 222, 179);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 600px) and (max-width: 1023px) {
+  footer {
+    width: calc(100% - 150px);
+    margin-left: 150px;
+  }
+}
+@media screen and (max-width: 599px) {
+  footer {
+    width: 100%;
+    margin-left: 0;
+  }
+}
+footer h3 {
+  position: relative;
+}
+footer h3::before {
+  top: initial;
+  bottom: 0;
+}
+footer .containerInfo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+}
+footer .containerInfo div {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+footer .buttonCV {
+  width: 50px;
+  height: 50px;
+}
+footer .btnCV {
+  background-color: rgb(250, 128, 114);
+  margin-bottom: 2rem;
+}
+
+/*# sourceMappingURL=style.css.map */

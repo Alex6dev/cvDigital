@@ -1,0 +1,20 @@
+// variable, fonction, mixins
+
+$clr-primaire: rgb(50, 82, 109);
+$clr-second: rgb(245, 222, 179);
+$clr-tertiaire:  rgb(250, 128, 114) ;
+$breakpoints: (
+    tablette_min:600px,
+    tablette_max:1023px, 
+    mobile:599px
+);
+@mixin tablette-only {
+    @media screen and ( min-width: map-get($breakpoints, "tablette_min")) and ( max-width: map-get($breakpoints, "tablette_max")) {
+        @content;
+    }
+}
+@mixin mobile-only {
+    @media screen and (max-width:map-get($breakpoints,mobile)){
+        @content;
+    }
+}

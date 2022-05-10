@@ -1,0 +1,332 @@
+header{
+    position: relative;
+    
+}
+header .containerHeader{
+    display: flex;
+    background-color: $clr-primaire;
+    width: 90%;
+    margin-left: 10%;
+    
+    & div{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        width: 78%;
+        background-color:transparent;
+    }
+    @include tablette-only{
+        width:calc(100% - 150px);
+        margin-left: 150px;
+    }
+    @include mobile-only{
+        width:100% ;
+        margin: 0;
+    }
+}
+.imgHeader{
+    margin: 2% ; 
+    object-fit: cover;
+    width: 10%;
+    min-width: 200px;
+    border-radius: 0 5rem;
+    box-shadow: 1px 1px 5px  rgb(0, 0, 0),
+    -1px -1px 5px  rgb(0, 0, 0);
+    @include mobile-only{
+        min-width: 100px;
+        border-radius: 0 2rem;
+    }
+}
+
+.containerNavVertical{
+    position: fixed;
+    background-color: $clr-primaire;
+    top: 0;
+    height: 100%;
+    width: 10%;
+    min-width: 150px;
+    display: flex;
+
+    & ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        height: 100%;
+        padding: 0;
+        & li{
+            font-size: 2rem;
+            padding: 0.5rem;
+            transform:rotateX(10deg) rotateY(-25deg);
+            box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.212);
+            text-align: center;
+            transition: 1s box-shadow;
+            &:hover{
+                box-shadow: 0px 0px 2px 3px black;
+            }
+        }
+    }
+    @include mobile-only{
+        display: none;
+    }
+}
+
+article{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 90%;
+    margin-left: 10%;
+    @include tablette-only{
+        width:calc(100% - 150px);
+        margin-left: 150px;
+    }
+    @include mobile-only{
+        width: 100%;
+        margin: 0;
+    }
+    & .containerContent{
+        max-width: 800px;
+        @include tablette-only{
+            width:90%;
+            margin: 50px;
+        }
+        @include mobile-only{
+            width: 100%;
+        }
+        & .containerProfil{
+            margin: 7rem 0 7rem 0;
+        }
+    }
+}
+
+.post-it{
+    margin: 7rem 0 7rem 0; 
+    padding: 2rem;
+    position: relative;
+    background-color: $clr-second;
+    border: solid 1px gray;
+    transform:translate(300px , 0) ;
+    opacity: 0;
+    box-shadow: 10px 10px 1px 1px $clr-primaire
+}
+
+.logoHardSkills{
+    height: 70px;
+    width: 70px;
+    object-fit: cover;
+    border-radius: 1rem;
+    @include mobile-only{
+        height: 50px;
+        width: 50px;
+        border-radius:  10px;
+    }
+
+}
+.listHardSkills{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    & li{
+        width: 150px;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        @include mobile-only{
+            width: 60px;    
+        } 
+
+    }
+    & figure{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem 0 0 0;
+
+    }
+}
+
+.listExp{
+    padding-top: 3rem ;
+    @include mobile-only{
+        margin-left: 0;
+    }
+}
+
+.point{
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-radius: 5rem; 
+    z-index: 1;
+}
+.pointNiv1{
+    background-color:$clr-primaire;
+    top: 1rem;
+    left: -3rem;
+}
+.pointNiv2{
+    background-color:$clr-tertiaire;
+    top: 0.5rem;
+    left: -5.5rem;
+    @include mobile-only{
+        left: -3rem;        
+    } 
+}
+.listProjetOpenclassrooms{
+    @include mobile-only{
+        padding: 0;  
+
+    }
+}
+.projetOpenclass{
+    transform: translate(100px,0);
+    opacity: 0;
+}
+.listInformationProjet{
+  
+    & li{
+        list-style-type: circle;
+    }
+}
+
+.headerPorjet{
+    display: flex;
+    & ul{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        padding: 0;
+    }
+    & li{
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        margin: 1rem;
+        @include mobile-only{
+            margin: 10px;    
+        } 
+    }
+    & figure{
+        margin: 0;
+    }
+
+}
+.logoSkillsProjet{
+    width: 50px;
+    height: 50px;
+    border-radius: 0.5rem;
+    object-fit: cover;
+    @include mobile-only{
+        height:25px;
+        width: 25px;
+    } 
+}
+.experience{
+    opacity: 0;
+    transform: translate(100px,0);
+}
+.barreHistorique{
+    width: 5px ;
+    height: 280rem;
+    background-color: $clr-primaire;
+    position: absolute;
+    top: 10rem; 
+    @include tablette-only{
+        height:205rem;
+    } 
+    @include mobile-only{
+        height: 140rem;        
+    }   
+}
+.diplome{
+    position: relative;
+    margin: 2rem 0 0 0;
+    &::after{
+        content: "";
+        background-color: $clr-tertiaire;
+        width: 70px;
+        height: 3px;
+        position: absolute;
+        bottom: -0.5rem;
+        left: 0;
+    }
+    &::before{
+        content: "";
+        background-color: $clr-tertiaire;
+        width: 10px;
+        height: 10px;
+        border-radius: 2rem;
+        position: absolute;
+        left: -1rem;
+        top:1rem;
+    }
+}
+.nameDiplome{
+    margin:  0.5rem 0 0 0 ;
+}
+.listFormation{
+    & p{
+        margin: 0;
+    }
+}
+
+.listCircle{
+    & li{
+        list-style-type: circle;
+    }
+}
+footer{
+    width: 90%;
+    height: 200px;
+    margin-left: 10%;
+    background-color: rgb(63, 63, 63);
+    color: $clr-second;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    @include tablette-only{
+        width:calc(100% - 150px);
+        margin-left: 150px;
+
+    }
+    @include mobile-only{
+        width: 100%; 
+        margin-left: 0;       
+    } 
+    & h3{
+        position: relative;
+        &::before{
+            top: initial;
+            bottom: 0;
+        }
+
+    }
+    & .containerInfo{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        & div{
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+        }
+    }
+    & .buttonCV{
+        width: 50px;
+        height: 50px;
+    }
+    & .btnCV{
+        background-color: $clr-tertiaire;
+        margin-bottom: 2rem;
+    }
+}
